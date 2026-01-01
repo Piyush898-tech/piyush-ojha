@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Dark Luxury Tech Palette */
+    --background: 0 0% 4%;
+    --foreground: 0 0% 90%;
+
+    --card: 0 0% 6%;
+    --card-foreground: 0 0% 90%;
+
+    --popover: 0 0% 5%;
+    --popover-foreground: 0 0% 90%;
+
+    --primary: 43 74% 53%;
+    --primary-foreground: 0 0% 4%;
+
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 90%;
+
+    --muted: 0 0% 10%;
+    --muted-foreground: 0 0% 55%;
+
+    --accent: 43 74% 53%;
+    --accent-foreground: 0 0% 4%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 14%;
+    --input: 0 0% 14%;
+    --ring: 43 74% 53%;
+
+    --radius: 0.75rem;
+
+    /* Custom tokens */
+    --obsidian: 0 0% 4%;
+    --silk-silver: 0 0% 90%;
+    --metallic-gold: 43 74% 53%;
+    --gold-dim: 43 50% 40%;
+    --card-elevated: 0 0% 8%;
+
+    --sidebar-background: 0 0% 5%;
+    --sidebar-foreground: 0 0% 90%;
+    --sidebar-primary: 43 74% 53%;
+    --sidebar-primary-foreground: 0 0% 4%;
+    --sidebar-accent: 0 0% 12%;
+    --sidebar-accent-foreground: 0 0% 90%;
+    --sidebar-border: 0 0% 14%;
+    --sidebar-ring: 43 74% 53%;
+  }
+
+  .dark {
+    --background: 0 0% 4%;
+    --foreground: 0 0% 90%;
+    --card: 0 0% 6%;
+    --card-foreground: 0 0% 90%;
+    --popover: 0 0% 5%;
+    --popover-foreground: 0 0% 90%;
+    --primary: 43 74% 53%;
+    --primary-foreground: 0 0% 4%;
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 90%;
+    --muted: 0 0% 10%;
+    --muted-foreground: 0 0% 55%;
+    --accent: 43 74% 53%;
+    --accent-foreground: 0 0% 4%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14%;
+    --input: 0 0% 14%;
+    --ring: 43 74% 53%;
+    --obsidian: 0 0% 4%;
+    --silk-silver: 0 0% 90%;
+    --metallic-gold: 43 74% 53%;
+    --gold-dim: 43 50% 40%;
+    --card-elevated: 0 0% 8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-obsidian text-silk-silver font-sans antialiased;
+    background-color: #0A0A0A;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  .text-gradient-gold {
+    background: linear-gradient(135deg, hsl(43 74% 53%), hsl(43 50% 40%), hsl(43 74% 53%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .border-gold {
+    border-color: hsl(43 74% 53% / 0.3);
+  }
+
+  .border-gold-hover:hover {
+    border-color: hsl(43 74% 53% / 0.8);
+    box-shadow: 0 0 20px -5px hsl(43 74% 53% / 0.3);
+  }
+
+  .glow-gold {
+    box-shadow: 0 0 30px -10px hsl(43 74% 53% / 0.4);
+  }
+
+  .skill-badge-luxury {
+    @apply px-4 py-2 text-sm border border-gold rounded-full bg-card 
+           text-silk-silver/80 transition-all duration-300;
+  }
+
+  .skill-badge-luxury:hover {
+    @apply border-primary/60 text-primary;
+    box-shadow: 0 0 15px -5px hsl(43 74% 53% / 0.4);
+  }
+
+  .bento-card {
+    @apply bg-card rounded-2xl border border-border overflow-hidden
+           transition-all duration-500 relative;
+  }
+
+  .bento-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(135deg, transparent 40%, hsl(43 74% 53% / 0.3) 50%, transparent 60%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+
+  .bento-card:hover::before {
+    opacity: 1;
+  }
+
+  .bento-card:hover {
+    @apply border-primary/30;
+    box-shadow: 0 0 40px -15px hsl(43 74% 53% / 0.3);
+  }
+
+  .project-image {
+    @apply w-full h-full object-cover transition-all duration-700;
+    filter: grayscale(100%);
+  }
+
+  .bento-card:hover .project-image {
+    filter: grayscale(0%);
+  }
+
+  .section-heading {
+    @apply text-4xl md:text-5xl font-display font-medium leading-tight tracking-tight;
+  }
+
+  .body-text {
+    @apply text-silk-silver/70 leading-relaxed font-light;
+  }
+
+  .stat-value {
+    @apply text-5xl md:text-6xl font-display font-bold text-gradient-gold;
+  }
+
+  .stat-label {
+    @apply text-sm uppercase tracking-widest text-silk-silver/50 mt-2;
+  }
+
+  .gold-icon {
+    @apply text-primary/80 transition-colors duration-300;
+  }
+
+  .gold-icon:hover {
+    @apply text-primary;
+    filter: drop-shadow(0 0 8px hsl(43 74% 53% / 0.5));
+  }
+}
+
+@layer utilities {
+  .bg-obsidian {
+    background-color: hsl(var(--obsidian));
+  }
+
+  .text-silk-silver {
+    color: hsl(var(--silk-silver));
+  }
+
+  .text-metallic-gold {
+    color: hsl(var(--metallic-gold));
+  }
+
+  .bg-card-elevated {
+    background-color: hsl(var(--card-elevated));
+  }
+
+  .font-display {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+
+  .font-tech {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .shimmer-mask {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .shimmer-mask::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      hsl(43 74% 53% / 0.4) 50%,
+      transparent 100%
+    );
+    transform: translateX(-100%);
+    transition: none;
+  }
+
+  .shimmer-mask:hover::after {
+    animation: shimmer 0.8s ease-out forwards;
+  }
+
+  @keyframes shimmer {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-marquee {
+    animation: marquee 25s linear infinite;
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
