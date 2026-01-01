@@ -1,63 +1,56 @@
-# Welcome to your project
+# Personal Portfolio
 
-## Project info
+This repository contains the source code for my personal portfolio website.
 
-**URL**: REPLACE_WITH_PROJECT_URL
+## 🌐 Live Website
+https://your-vercel-url.vercel.app
 
-## How can I edit this code?
+## 🛠️ Tech Used
 
-There are several ways of editing your application.
+- Vite  
+- TypeScript  
+- React  
+- shadcn-ui  
+- Tailwind CSS  
 
-**Use your preferred IDE**
+## 📖 How to Use This Repository
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will be reflected in your remote repository.
+You can explore this repository to understand how the portfolio is built using modern frontend tools.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Run Locally
 
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+```bash
+git clone https://github.com/your-username/your-repo-name.git
+cd your-repo-name
+npm install
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+## 🤝 Contributing
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Contributions are welcome.
 
-**Use GitHub Codespaces**
+- Fork the repository  
+- Create a new branch  
+- Make your changes  
+- Submit a pull request  
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Please keep the code clean and follow the existing style.
 
-## What technologies are used for this project?
+---
 
-This project is built with:
+## 🚀 Deployment
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+This project is deployed on **Vercel**.
 
-## How can I deploy this project?
+To deploy your own version:
 
-Follow your chosen hosting platform's deployment instructions (e.g., Vercel, Netlify, GitHub Pages, or your own provider).
+- Push the repository to GitHub  
+- Import the project into Vercel  
+- Deploy using the default settings  
 
-## Can I connect a custom domain?
+---
 
-Yes — consult your hosting provider's documentation for steps to connect a custom domain.
+## © Copyright
+
+© 2026 **Piyush Ojha**. All rights reserved.
