@@ -1,16 +1,16 @@
 const skills = [
   { name: "Figma", icon: "🎨" },
   { name: "Adobe XD", icon: "✨" },
-  { name: "Python", icon: "🐍" },
-  { name: "TensorFlow", icon: "🧠" },
-  { name: "React", icon: "⚛️" },
-  { name: "TypeScript", icon: "📘" },
-  { name: "Computer Vision", icon: "👁️" },
-  { name: "UI/UX Design", icon: "💎" },
-  { name: "Machine Learning", icon: "🤖" },
-  { name: "Photoshop", icon: "🖼️" },
-  { name: "After Effects", icon: "🎬" },
-  { name: "Premiere Pro", icon: "🎥" },
+  { name: "Sketch", icon: "🧩" },
+  { name: "Wireframing", icon: "📐" },
+  { name: "Prototyping", icon: "🔗" },
+  { name: "User Research", icon: "🔍" },
+  { name: "Usability Testing", icon: "🧪" },
+  { name: "Interaction Design", icon: "⚡" },
+  { name: "Design Systems", icon: "🗂️" },
+  { name: "Responsive Design", icon: "📱" },
+  { name: "Typography", icon: "🔠" },
+  { name: "Color Theory", icon: "🎨" },
 ];
 
 const SkillsMarquee = () => {
@@ -18,7 +18,7 @@ const SkillsMarquee = () => {
 
   return (
     <section className="py-12 sm:py-16 bg-card overflow-hidden border-y border-border">
-      <div className="flex animate-marquee hover:[animation-play-state:paused]">
+      <div className="flex animate-marquee whitespace-nowrap">
         {duplicatedSkills.map((skill, index) => (
           <div
             key={`${skill.name}-${index}`}

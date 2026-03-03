@@ -1,14 +1,6 @@
 import { ExternalLink } from "lucide-react";
 
-interface Project {
-  title: string;
-  description: string;
-  stat: string;
-  statLabel: string;
-  imageUrl: string;
-  tags: string[];
-  size: "large" | "medium" | "small";
-}
+import type { Project } from "@/lib/projects";
 
 interface BentoGridProps {
   projects: Project[];
@@ -22,24 +14,30 @@ const BentoGrid = ({ projects }: BentoGridProps) => {
         <div className="mb-10 sm:mb-16">
           <span className="text-xs font-tech uppercase tracking-[0.2em] sm:tracking-[0.3em] text-metallic-gold">Featured Work</span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-medium leading-tight mt-4">
-            where <span className="text-gradient-gold italic">code</span> meets <br className="hidden sm:block" />
+            where <span className="text-gradient-gold italic">design</span> meets <br className="hidden sm:block" />
             creative vision
           </h2>
         </div>
 
         {/* Bento Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 auto-rows-[240px] sm:auto-rows-[280px]">
-          {projects.map((project) => (
-            <div
-              key={project.title}
-              className={`bento-card group cursor-pointer ${
-                project.size === "large" 
-                  ? "sm:col-span-2 sm:row-span-2" 
-                  : project.size === "medium" 
-                  ? "sm:col-span-1 sm:row-span-2" 
-                  : ""
-              }`}
-            >
+          {projects.map((project) => {
+            const wrapperProps = project.link
+              ? { href: project.link, target: "_blank", rel: "noopener noreferrer" }
+              : {};
+
+            return (
+              <a
+                key={project.title}
+                {...wrapperProps}
+                className={`bento-card group cursor-pointer ${
+                  project.size === "large" 
+                    ? "sm:col-span-2 sm:row-span-2" 
+                    : project.size === "medium" 
+                    ? "sm:col-span-1 sm:row-span-2" 
+                    : ""
+                }`}
+              >
               {/* Image */}
               <div className="absolute inset-0">
                 <img
@@ -85,8 +83,9 @@ const BentoGrid = ({ projects }: BentoGridProps) => {
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
+            </a>
+          );
+        })}
         </div>
       </div>
     </section>

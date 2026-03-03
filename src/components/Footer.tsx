@@ -20,7 +20,7 @@ const Footer = () => {
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-silk-silver/40">
           <p>© {new Date().getFullYear()} Piyush Ojha. All rights reserved.</p>
           <p className="flex items-center gap-2">
-            Crafted with <Heart className="w-4 h-4 text-metallic-gold fill-metallic-gold" /> and neural networks
+            Where design meets usability.
           </p>
         </div>
       </div>
