@@ -38,15 +38,15 @@ export const projects: Project[] = [
     size: "large",
     link: "https://www.figma.com/community/file/1610676034357241746",
   },
-//   {
-//     title: "Excalinox",
-//     description: "CoreX was designed to demonstrate how bold typography, high-contrast color psychology, and structured content flow can create a powerful, conversion-driven fitness landing page. The project emphasizes community, commitment, and seamless reservation booking within a visually striking interface.",
-//     stat: "92% Accuracy",
-//     statLabel: "Prediction Rate",
-//     imageUrl: "landing-thumbnail.png",
-//     tags: ["Figma", "UI/UX", "Creativity", "React"],
-//     size: "medium",
-//     link: "https://www.figma.com/community/file/1610676034357241746",
-//   },
+  {
+    title: "Scalinox",
+    description: "Scalinox is a web-based creative suite and a two-sided marketplace that bridges the gap between imagination and creation.",
+    stat: "React App",
+    statLabel: "Scalinox - AI-Powered Image Scaling",
+    imageUrl: "landing-thumbnail.png",
+    tags: ["Figma", "UI/UX", "Creativity", "React"],
+    size: "medium",
+    link: "https://scalinox.vercel.app/",
+  },
   
 ];
