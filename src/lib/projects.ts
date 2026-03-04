@@ -43,7 +43,7 @@ export const projects: Project[] = [
     description: "Scalinox is a web-based creative suite and a two-sided marketplace that bridges the gap between imagination and creation.",
     stat: "React App",
     statLabel: "Scalinox - AI-Powered Image Scaling",
-    imageUrl: "landing-thumbnail.png",
+    imageUrl: "scalinox-thumbnail.png",
     tags: ["Figma", "UI/UX", "Creativity", "React"],
     size: "medium",
     link: "https://scalinox.vercel.app/",

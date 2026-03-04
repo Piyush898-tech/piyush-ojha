@@ -56,7 +56,7 @@ const Navigation = () => {
           <div className="flex items-center gap-4">
             {/* CTA - Hidden on very small screens */}
             <a
-              href="mailto:piyush@example.com"
+              href="mailto:officialpiyush90@gmail.com"
               className="hidden sm:block text-sm font-tech px-4 py-2 border border-metallic-gold/30 rounded-full text-metallic-gold hover:bg-metallic-gold hover:text-obsidian transition-all duration-300"
             >
               Contact

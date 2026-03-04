@@ -35,24 +35,26 @@ const HeroSection = () => {
           experiences that <span className="text-metallic-gold">remember</span>.
         </p>
 
-        {/* Current Role */}
+        {/* Current/Previous Role */}
         <div className="mt-8 sm:mt-10 animate-[fade-in_0.8s_ease-out_0.8s_both]">
-          <p className="text-xs sm:text-sm font-tech uppercase tracking-widest text-silk-silver/40 mb-2">Currently at</p>
+          <p className="text-xs sm:text-sm font-tech uppercase tracking-widest text-silk-silver/40 mb-2">Worked at</p>
           <p className="text-lg sm:text-xl font-display text-silk-silver/90">
             Indian Air Force
           </p>
-          <p className="text-xs sm:text-sm text-silk-silver/50 mt-1">Multimedia Specialist & AI Systems Designer</p>
+          <p className="text-xs sm:text-sm text-silk-silver/50 mt-1">
+            Design‑oriented multimedia roles & AI systems (project work)
+          </p>
         </div>
 
         {/* Social Links */}
         <div className="flex items-center justify-center gap-6 mt-10 sm:mt-12 animate-[fade-in_0.8s_ease-out_1s_both]">
-          <a href="#" className="gold-icon p-2" aria-label="GitHub">
+          <a href="https://github.com/Piyush898-tech/" className="gold-icon p-2" aria-label="GitHub">
             <Github className="w-5 h-5" />
           </a>
-          <a href="#" className="gold-icon p-2" aria-label="LinkedIn">
+          <a href="https://www.linkedin.com/in/piyush-ojha-79225b252" className="gold-icon p-2" aria-label="LinkedIn">
             <Linkedin className="w-5 h-5" />
           </a>
-          <a href="#" className="gold-icon p-2" aria-label="Email">
+          <a href="mailto:officialpiyush90@gmail.com" className="gold-icon p-2" aria-label="Email">
             <Mail className="w-5 h-5" />
           </a>
         </div>
